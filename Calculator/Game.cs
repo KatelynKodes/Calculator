@@ -73,6 +73,7 @@ namespace Calculator
                 else
                 {
                     Console.WriteLine("That is not a valid input");
+                    Console.ReadKey(true);
                 }
             }
         }
@@ -118,14 +119,14 @@ namespace Calculator
                         else
                         {
                             Console.WriteLine("That is not a valid input");
-                            Console.ReadKey();
+                            Console.ReadKey(true);
                         }
                     }
                 }
                 else
                 {
                     Console.WriteLine("That is not a valid input");
-                    Console.ReadKey();
+                    Console.ReadKey(true);
                 }
             }
 
@@ -189,7 +190,7 @@ namespace Calculator
         {
             float totalvalue = num1 + num2;
             Console.WriteLine(num1 + " + " + num2 + " = " + totalvalue);
-            Console.ReadKey();
+            Console.ReadKey(true);
             return totalvalue;
         }
 
@@ -203,7 +204,7 @@ namespace Calculator
         {
             float subtractvalue = num1 - num2;
             Console.WriteLine(num1 + " - " + num2 + " = " + subtractvalue);
-            Console.ReadKey();
+            Console.ReadKey(true);
             return subtractvalue;
         }
 
@@ -217,7 +218,7 @@ namespace Calculator
         {
             float mult_Value = num1 * num2;
             Console.WriteLine(num1 + " x " + num2 + " = " + mult_Value);
-            Console.ReadKey();
+            Console.ReadKey(true);
             return mult_Value;
         }
 
@@ -225,7 +226,7 @@ namespace Calculator
         {
             float div_Value = num1 / num2;
             Console.WriteLine(num1 + " / " + num2 + " = " + div_Value);
-            Console.ReadKey();
+            Console.ReadKey(true);
             return div_Value;
         }
 
