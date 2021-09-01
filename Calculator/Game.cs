@@ -6,8 +6,8 @@ namespace Calculator
 {
     class Game
     {
-        public int firstNum;
-        public int secondNum;
+        public float firstNum;
+        public float secondNum;
 
         public string input;
         public string Operation;
@@ -31,12 +31,12 @@ namespace Calculator
             while (MenuOpen)
             {
                 Console.Clear();
-                Console.WriteLine("Choose if you'd like to: \n [A] Add \n [S] Subtract \n [M] Multiply. \n Press [E] or type \"Exit\" to leave the calculator");
+                Console.WriteLine("Choose if you'd like to: \n[A] Add \n[S] Subtract \n[M] Multiply \n[D] Divide \nPress [E] or type \"Exit\" to leave the calculator");
                 Console.Write(">");
                 input = Console.ReadLine();
 
                 //Checks if the input is equal to an actual operation in the menu
-                if (input.ToLower() == "a" ||input.ToLower() == "add")
+                if (input.ToLower() == "a" || input.ToLower() == "add")
                 {
                     MenuOpen = false;
                     //Sets operation
@@ -55,6 +55,13 @@ namespace Calculator
                     MenuOpen = false;
                     //Sets operation
                     Operation = "multiply";
+                    InputNumbers();
+                }
+                else if (input.ToLower() == "d" || input.ToLower() == "divide")
+                {
+                    MenuOpen = false;
+                    //Sets operation
+                    Operation = "divide";
                     InputNumbers();
                 }
                 else if (input.ToLower() == "e" || input.ToLower() == "exit")
@@ -84,10 +91,10 @@ namespace Calculator
             while (!completeOperation)
             {
                 Console.Clear();
-                Console.WriteLine("Input your first number. (MUST be an integer, no decimal values)");
+                Console.WriteLine("Input your first number.");
                 Console.Write(">");
                 Num1Input = Console.ReadLine();
-                num1Success = int.TryParse(Num1Input, out firstNum);
+                num1Success = float.TryParse(Num1Input, out firstNum);
 
                 //Detects if Num1Input is actually an integer.
                 if (num1Success)
@@ -95,12 +102,13 @@ namespace Calculator
                     bool validSecondNumber = false;
                     while (!validSecondNumber)
                     {
-                        Console.WriteLine("Input your second number. (MUST be an integer, no decimal values)");
+                        Console.Clear();
+                        Console.WriteLine("Input your second number.");
                         Console.Write(">");
                         Num2Input = Console.ReadLine();
 
                         //Detects if Num2Input is actually an integer.
-                        num2Success = int.TryParse(Num2Input, out secondNum);
+                        num2Success = float.TryParse(Num2Input, out secondNum);
                         if (num2Success)
                         {
                             //Sets both values to true, exiting the loop
@@ -110,12 +118,14 @@ namespace Calculator
                         else
                         {
                             Console.WriteLine("That is not a valid input");
+                            Console.ReadKey();
                         }
                     }
                 }
                 else
                 {
                     Console.WriteLine("That is not a valid input");
+                    Console.ReadKey();
                 }
             }
 
@@ -133,6 +143,10 @@ namespace Calculator
             else if (Operation == "multiply")
             {
                 Multiply(firstNum, secondNum);
+            }
+            else if (Operation == "divide")
+            {
+                Divide(firstNum, secondNum);
             }
         }
 
@@ -171,9 +185,9 @@ namespace Calculator
         /// <param name="num1"></param>
         /// <param name="num2"></param>
         /// <returns></returns>
-        int AddNums(int num1, int num2)
+        float AddNums(float num1, float num2)
         {
-            int totalvalue = num1 + num2;
+            float totalvalue = num1 + num2;
             Console.WriteLine(num1 + " + " + num2 + " = " + totalvalue);
             Console.ReadKey();
             return totalvalue;
@@ -185,9 +199,9 @@ namespace Calculator
         /// <param name="num1"></param>
         /// <param name="num2"></param>
         /// <returns></returns>
-        int SubNums(int num1, int num2)
+        float SubNums(float num1, float num2)
         {
-            int subtractvalue = num1 - num2;
+            float subtractvalue = num1 - num2;
             Console.WriteLine(num1 + " - " + num2 + " = " + subtractvalue);
             Console.ReadKey();
             return subtractvalue;
@@ -199,12 +213,20 @@ namespace Calculator
         /// <param name="num1"></param>
         /// <param name="num2"></param>
         /// <returns></returns>
-        int Multiply(int num1, int num2)
+        float Multiply(float num1, float num2)
         {
-            int mult_Value = num1 * num2;
+            float mult_Value = num1 * num2;
             Console.WriteLine(num1 + " x " + num2 + " = " + mult_Value);
             Console.ReadKey();
             return mult_Value;
+        }
+
+        float Divide(float num1, float num2)
+        {
+            float div_Value = num1 / num2;
+            Console.WriteLine(num1 + " / " + num2 + " = " + div_Value);
+            Console.ReadKey();
+            return div_Value;
         }
 
     }
