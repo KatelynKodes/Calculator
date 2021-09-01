@@ -1,0 +1,11 @@
+C:\Users\s218002\source\repos\Calculator\Calculator\bin\Release\netcoreapp3.1\Calculator.exe
+C:\Users\s218002\source\repos\Calculator\Calculator\bin\Release\netcoreapp3.1\Calculator.deps.json
+C:\Users\s218002\source\repos\Calculator\Calculator\bin\Release\netcoreapp3.1\Calculator.runtimeconfig.json
+C:\Users\s218002\source\repos\Calculator\Calculator\bin\Release\netcoreapp3.1\Calculator.runtimeconfig.dev.json
+C:\Users\s218002\source\repos\Calculator\Calculator\bin\Release\netcoreapp3.1\Calculator.dll
+C:\Users\s218002\source\repos\Calculator\Calculator\bin\Release\netcoreapp3.1\Calculator.pdb
+C:\Users\s218002\source\repos\Calculator\Calculator\obj\Release\netcoreapp3.1\Calculator.csprojAssemblyReference.cache
+C:\Users\s218002\source\repos\Calculator\Calculator\obj\Release\netcoreapp3.1\Calculator.AssemblyInfoInputs.cache
+C:\Users\s218002\source\repos\Calculator\Calculator\obj\Release\netcoreapp3.1\Calculator.AssemblyInfo.cs
+C:\Users\s218002\source\repos\Calculator\Calculator\obj\Release\netcoreapp3.1\Calculator.dll
+C:\Users\s218002\source\repos\Calculator\Calculator\obj\Release\netcoreapp3.1\Calculator.pdb
